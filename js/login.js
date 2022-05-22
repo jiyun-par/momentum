@@ -15,6 +15,17 @@ const resultID = document.querySelector(".result-box");
 const confirmBtn = document.querySelector("#confirm");
 const dim = document.querySelector("#dim");
 const closeRegister = document.querySelector("#close-btn");
+const currentTime = new Date().getHours();
+let greetingText = "";
+if (currentTime >= 6 && currentTime < 12) {
+	greetingText = "Good morning";
+} else if (currentTime >= 12 && currentTime < 18) {
+	greetingText = "Good afternoon";
+} else if (currentTime >= 18 && currentTime < 24) {
+	greetingText = "Good evening";
+} else if (currentTime >= 0 && currentTime < 6) {
+	greetingText = "Good dawn";
+}
 
 registerForm.addEventListener("submit", handleRegisterInput);
 registerBtn.addEventListener("click", handleRegisterClick);
@@ -27,7 +38,7 @@ function login() {
 	const getSession = sessionStorage.getItem("login");
 	if (getSession) {
 		momentum.classList.remove(HIDDEN_CLASSNAME);
-		greeting.innerHTML = `Hello <br> ${getSession}`;
+		greeting.innerHTML = `${greetingText} <br> ${getSession}`;
 	} else {
 		loginBox.classList.remove(HIDDEN_CLASSNAME);
 	}
@@ -87,7 +98,7 @@ function handleLogin(e) {
 			sessionStorage.setItem("login", userName);
 			momentum.classList.remove(HIDDEN_CLASSNAME);
 			loginBox.classList.add(HIDDEN_CLASSNAME);
-			greeting.innerHTML = `Hello <br> ${userName}`;
+			greeting.innerHTML = `${greetingText} <br> ${userName}`;
 		} else {
 			alert("ID or Password is not correct. Please check again!");
 			loginId.focus();
