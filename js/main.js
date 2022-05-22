@@ -19,7 +19,7 @@ window.addEventListener("load", function () {
 			location.reload();
 		}
 	});
-	body.style.background = `url(../img/${bg}.jpg)no-repeat center / 100% 100vh`;
+	body.style.background = `url(./img/${bg}.jpg)no-repeat center / 100% 100vh`;
 });
 function getAdvice() {
 	fetch("https://api.adviceslip.com/advice")
