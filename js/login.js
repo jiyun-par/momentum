@@ -38,6 +38,7 @@ function login() {
 	const getSession = sessionStorage.getItem("login");
 	if (getSession) {
 		momentum.classList.remove(HIDDEN_CLASSNAME);
+		momentum.style.display = "flex";
 		greeting.innerHTML = `${greetingText} <br> ${getSession}`;
 	} else {
 		loginBox.classList.remove(HIDDEN_CLASSNAME);
@@ -96,6 +97,7 @@ function handleLogin(e) {
 		if (getID.id === userName && getID.pw === userPw) {
 			setLocalTodo(userName);
 			sessionStorage.setItem("login", userName);
+			momentum.style.display = "flex";
 			momentum.classList.remove(HIDDEN_CLASSNAME);
 			loginBox.classList.add(HIDDEN_CLASSNAME);
 			greeting.innerHTML = `${greetingText} <br> ${userName}`;
