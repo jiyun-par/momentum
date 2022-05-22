@@ -1,0 +1,283 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html,
+body {
+	height: 100%;
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+	font-family: "NotoSansKr";
+}
+body::-webkit-scrollbar {
+	display: none;
+}
+.hidden {
+	display: none;
+}
+#logout {
+	margin: 20px 0 20px 700px;
+	font-size: 39px;
+	color: #fff;
+	cursor: pointer;
+}
+
+/* body */
+#momentum {
+	width: 750px;
+	margin: 0 auto;
+	position: relative;
+}
+
+/* clock weather */
+.clockWeather-box {
+	position: relative;
+	margin-top: 50px;
+	width: 750px;
+	height: 170px;
+}
+
+.weather {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 460px;
+	height: 130px;
+	color: #fff;
+	padding: 20px;
+	background-color: rgba(24, 20, 51, 0.479);
+	border-radius: 20px;
+}
+
+hr {
+	margin-top: 10px;
+}
+.getWeather {
+	display: inline-block;
+}
+.icon-status {
+	width: 50px;
+}
+
+.temp {
+	width: 250px;
+	margin-left: 41px;
+}
+.current-temp {
+	display: inline-block;
+	font-size: 50px;
+}
+.min-max-temp {
+	margin-left: 20px;
+	display: inline-block;
+}
+#clock {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	font-size: 28px;
+	text-align: center;
+	font-weight: 600;
+	color: rgb(226, 226, 226);
+	display: inline-block;
+	background-color: rgba(2, 14, 12, 0.575);
+	padding: 10px;
+	border-radius: 20px;
+}
+/* profile */
+.profile {
+	width: 750px;
+	display: flex;
+	margin: 0 auto;
+}
+.photo {
+	display: inline-block;
+	position: relative;
+	margin-top: 50px;
+	width: 148px;
+	height: 100px;
+
+	margin-left: 50px;
+}
+.circle {
+	position: absolute;
+	top: 63px;
+	left: 48px;
+	transform: translate(-50%, -50%);
+	width: 200px;
+	height: 200px;
+	opacity: 0.7;
+	border-radius: 55% 65% 55% 68%;
+	animation: circle 5s infinite linear;
+}
+@keyframes circle {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+#greeting {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	text-shadow: 5px 5px rgba(0, 0, 0, 0.308);
+	color: rgb(199, 199, 199);
+	transform: translate(-50%, -50%);
+	text-align: center;
+	font-size: 25px;
+}
+
+/* login */
+#welcome-txt {
+	margin: 50px 0 10px 20px;
+}
+#welcome-txt h2 {
+	color: #1a3c40;
+	margin-bottom: 20px;
+}
+#welcome-txt p {
+	color: #417d7a;
+}
+#login-box {
+	width: 540px;
+	height: 700px;
+	border-radius: 20px;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.137);
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(255, 255, 255, 0.507);
+}
+#login-box button {
+	width: 150px;
+	height: 50px;
+	font-size: 18px;
+	display: block;
+	margin: 30px auto;
+	background: transparent;
+	border: 1px solid #1a3c40;
+	border-radius: 20px;
+	cursor: pointer;
+}
+#login-form {
+	margin-top: 100px;
+}
+#login-form input {
+	width: 320px;
+	height: 50px;
+	margin: 15px auto 0;
+	background-color: transparent;
+	border: 0;
+	border-bottom: 1px solid #1a3c40;
+	display: block;
+	outline: none;
+	font-size: 18px;
+	text-indent: 20px;
+	color: #1a3c40;
+}
+#login-form input::placeholder {
+	text-indent: 20px;
+}
+
+/* login-E */
+
+/* register popup */
+#dim {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+#pop-register {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 20;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	height: 300px;
+	background-color: #1a3c40;
+	padding-top: 50px;
+	color: #fff;
+}
+#register-form {
+	width: 100%;
+	height: 100px;
+	margin: 0 auto;
+}
+#pop-register h2 {
+	text-align: center;
+}
+#register-form input {
+	width: 220px;
+	height: 50px;
+	margin: 15px auto 0;
+	text-indent: 10px;
+	border: none;
+	display: block;
+}
+#register-form input::placeholder {
+	text-indent: 10px;
+}
+.guide {
+	text-align: center;
+}
+#confirm {
+	width: 100px;
+	height: 50px;
+	border: none;
+	font-size: 18px;
+	display: block;
+	margin: 20px auto;
+	background-color: transparent;
+	border: 2px solid #fff;
+	border-radius: 20px;
+	cursor: pointer;
+	color: #fff;
+}
+#close-btn {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: none;
+	background-color: transparent;
+	width: 80px;
+	height: 80px;
+	font-size: 40px;
+	color: #fff;
+	cursor: pointer;
+}
+.result-box {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	font-size: 20px;
+	width: 100%;
+}
+
+/* advice */
+.advice-box {
+	background-color: rgba(255, 255, 255, 0.349);
+	border-radius: 20px;
+	width: 460px;
+	height: 165px;
+	margin: 55px 0 0 50px;
+}
+
+.advice-box h2 {
+	margin: 20px 0 10px 20px;
+}
+
+.advice-box p {
+	margin-left: 20px;
+}

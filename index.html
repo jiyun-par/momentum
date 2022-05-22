@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/todolist.css" />
+		<script src="https://use.fontawesome.com/releases/v6.1.1/js/all.js"></script>
+
+		<title>Momentum App</title>
+	</head>
+	<body>
+		<!-- login -->
+		<div id="login-box" class="hidden">
+			<div id="welcome-txt">
+				<h2>Welcome to momentum! 🙇‍♀️</h2>
+				<p>Sign in to continue</p>
+			</div>
+			<form id="login-form">
+				<input
+					required
+					maxlength="15"
+					type="text"
+					placeholder="Please write your ID"
+					id="login-id"
+				/>
+				<input
+					required
+					maxlength="15"
+					type="password"
+					placeholder="Please write your password"
+					id="login-pw"
+				/>
+				<button>Log In</button>
+			</form>
+			<p class="guide">If you don't have ID, please create account.</p>
+			<button id="register">Create account</button>
+		</div>
+		<!-- create id -->
+		<div id="pop-register" class="hidden">
+			<div class="register-box">
+				<h2>Create new ID</h2>
+				<form id="register-form">
+					<input
+						required
+						maxlength="15"
+						type="text"
+						placeholder="Please write your ID"
+						id="id"
+					/>
+					<input
+						required
+						maxlength="15"
+						type="password"
+						placeholder="Please write your Password"
+						id="password"
+					/>
+					<button id="confirm">Confirm</button>
+				</form>
+			</div>
+			<div class="result-box hidden"></div>
+			<button id="close-btn"><i class="fa-solid fa-xmark"></i></button>
+		</div>
+		<div id="dim" class="hidden"></div>
+		<!-- momentum -->
+		<div id="momentum" class="hidden">
+			<button type="button" id="logout"><i class="fa-solid fa-right-from-bracket"></i></button>
+			<div class="profile">
+				<div class="photo">
+					<h1 id="greeting"></h1>
+				</div>
+				<!-- advice -->
+				<div class="advice-box">
+					<h2>Today's random advice</h2>
+					<p class="advice-text">Loading...</p>
+				</div>
+			</div>
+			<!-- clock  weather-->
+			<div class="clockWeather-box">
+				<div id="clock"></div>
+				<div class="weather">
+					<div class="loading">Loading...</div>
+					<div class="locate"></div>
+					<hr>
+					<div class="getWeather icon-status">
+						<img src="" class="weather-icon"></img>
+						<p class="status"></p>
+					</div>
+					<div class="getWeather temp">
+					 <span class="current-temp"></span>
+					 <span class="min-max-temp"></span>	
+					</div>
+				</div>
+			</div>
+			<!-- todolist -->
+			<div class="todo-box">
+				<h3 class="info">You can scroll here</h3>
+				<div id="wrapper">
+					<h1 id="title">To Do List</h1>
+					<div id="textBox">
+						<form id="form">
+							<input
+								type="text"
+								id="ToDo"
+								placeholder="Write To Do List"
+								autocomplete="off"
+								maxlength="20"
+								required
+							/>
+						</form>
+						<button type="button" id="putBtn">
+							<i class="far fa-plus-square"></i>
+						</button>
+					</div>
+					<input type="checkbox" name="checkList" id="checkAll" />
+					<label for="checkAll"><span>All</span></label>
+
+					<div id="to">
+						<!-- <h2 class="subtit">To Do</h2> -->
+						<ul id="list" class="list"></ul>
+					</div>
+
+					<div id="complete">
+						<!-- <h2 class="subtit">Done</h2> -->
+						<ul id="doneList" class="list"></ul>
+					</div>
+					<div class="removeWrap">
+						<button type="button" id="removeChecked" class="allBtn">
+							Remove Checked
+						</button>
+						<button type="button" id="removeAll" class="allBtn">
+							Remove<br />All
+						</button>
+					</div>
+
+					<div class="checkRemove">
+						<p>Do you really want to remove all?</p>
+						<div id="buttonWrap" class="buttonWrap">
+							<button type="button" class="checkBtn checkBtn1">
+								Yes
+							</button>
+							<button type="button" class="checkBtn checkBtn2">
+								No
+							</button>
+						</div>
+					</div>
+					<div class="dim"></div>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/main.js"></script>
+		<script src="js/todolist.js"></script>
+		<script src="js/todoClick.js"></script>
+		<script src="js/login.js"></script>
+		<script src="js/clock.js"></script>
+		<script src="js/navigator.js"></script>
+	</body>
+</html>
