@@ -14,7 +14,8 @@ ul li {
 }
 .info {
 	margin: 20px;
-	color: #fff;
+	color: rgba(255, 255, 255, 0.315);
+	position: fixed;
 }
 button {
 	background: none;
@@ -23,10 +24,10 @@ button {
 	cursor: pointer;
 }
 .todo-box {
-	width: 750px;
-	height: 500px;
+	width: 700px;
+	height: 700px;
 	margin: 0 auto;
-	margin-top: 60px;
+	margin: 100px 30px 0 0;
 	padding-top: 20px;
 	border-radius: 20px;
 	background-color: rgba(41, 24, 24, 0.39);
@@ -81,7 +82,7 @@ button {
 	text-align: left;
 	margin: 5px 20px;
 	cursor: pointer;
-	background-color: rgba(87, 87, 87, 0.363);
+	background-color: rgba(87, 87, 87, 0.747);
 }
 .list li div {
 	display: inline-block;

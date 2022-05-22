@@ -8,6 +8,7 @@ body {
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none; /* Firefox */
 	font-family: "NotoSansKr";
+	overflow: hidden;
 }
 body::-webkit-scrollbar {
 	display: none;
@@ -16,31 +17,32 @@ body::-webkit-scrollbar {
 	display: none;
 }
 #logout {
-	margin: 20px 0 20px 700px;
-	font-size: 39px;
+	position: absolute;
+	top: 314px;
+	left: 311px;
+	font-size: 27px;
 	color: #fff;
 	cursor: pointer;
 }
 
 /* body */
 #momentum {
-	width: 750px;
+	display: flex;
+	justify-content: space-around;
 	margin: 0 auto;
 	position: relative;
+	width: 1920px;
+	height: 1080px;
 }
 
 /* clock weather */
 .clockWeather-box {
 	position: relative;
-	margin-top: 50px;
-	width: 750px;
-	height: 170px;
+	margin: 650px 0 0 30px;
+	width: 640px;
 }
 
 .weather {
-	position: absolute;
-	top: 0;
-	right: 0;
 	width: 460px;
 	height: 130px;
 	color: #fff;
@@ -72,13 +74,10 @@ hr {
 	display: inline-block;
 }
 #clock {
-	position: absolute;
-	top: 50%;
-	left: 0;
-	transform: translateY(-50%);
 	font-size: 28px;
 	text-align: center;
 	font-weight: 600;
+	margin-bottom: 30px;
 	color: rgb(226, 226, 226);
 	display: inline-block;
 	background-color: rgba(2, 14, 12, 0.575);
@@ -87,14 +86,12 @@ hr {
 }
 /* profile */
 .profile {
-	width: 750px;
-	display: flex;
-	margin: 0 auto;
+	width: 640px;
 }
 .photo {
 	display: inline-block;
 	position: relative;
-	margin-top: 50px;
+	margin: 200px 0 0 50px;
 	width: 200px;
 	height: 200px;
 	border-radius: 100%;
