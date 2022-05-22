@@ -15,7 +15,6 @@ ul li {
 .info {
 	margin: 20px;
 	color: rgba(255, 255, 255, 0.315);
-	position: fixed;
 }
 button {
 	background: none;
